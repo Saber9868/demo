@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 工厂模式
+        function obj(name){
+            var a=new Object();
+            a.action=function (){
+                alert(name+"前端");
+            }
+            return a;
+        }
+        // 原型函数
+        function obj(name){
+        }
+        obj.prototype.action=function (){
+            alert(name+"前端");
+        }
+		// 混合函数
+        function obj(name){
+        }
+        obj.prototype={
+            action:function (){
+                alert(name+"前端");
+            }
+        }
+        // 构造函数
+        function obj(name){
+            this.action=function (){
+                alert(name+"前端");
+            }
+        }
+        var a1=new obj("imooc");
+        a1.action();
+	</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+*{
+    padding:0;
+    margin:0;
+    border:0;   /* 上面的一部分是我从上一个作业相同的部分复制过来的  做的时候我还奇怪怎么所有的边框都没了   最后才发现原来复制的时候有个这个   再改太麻烦了  只能这样了 */
+}
+.clear{
+    clear: ;
+}
+/* 去除a标签下划线 */
+a{
+    text-decoration: none;
+}
+/* 整个页面的宽度 */
+.box{
+    width: 100%;
+}
+/* 页面顶部样式 */
+.top{
+    height: 40px;
+    background: rgb(245, 245, 245);
+}
+.top-box{
+    width: 60%;
+    margin: 0 auto;
+}
+.top-box p{
+    background: url(http://climg.mukewang.com/58c61b9d0001e02d00170017.png) center no-repeat;
+}
+.top-left{
+    padding-left: 12px;
+    line-height: 40px;
+    float: left;
+    color: rgb(155, 151, 151);
+}
+.top-right{
+    line-height: 40px;
+    float: right;
+    color: rgb(155, 151, 151);
+}
+.top-right a{
+    color: rgb(0, 204, 255);
+}
+/* logo及搜索框样式 */
+header{
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+header .header-left{
+    background: url(http://climg.mukewang.com/58c61b2f0001f5c008400172.png) no-repeat center;
+    background-size: 400px;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+}
+header .header-right{
+    background: url(http://climg.mukewang.com/58c61b7e00012b9303260038.jpg) no-repeat center;
+    background-size: 320px;
+    width: 320px;
+    height: 100px;
+    float: right;
+    position: relative;
+}
+header .header-right p{
+    position: absolute;
+    top: 38px;
+    left: 8px;
+    color: #fff;
+}
+header .header-right a{
+    position: absolute;
+    top: 38px;
+    left: 43px;
+}
+header .header-right input{
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    height: 35px;
+    width: 211px;
+    outline: none;
+    font-size: 16px;
+}
+/* 隐藏的选项栏 */
+.header-none{
+    width: 67px;
+    height: 95px;
+    background: #fff;
+    z-index: 999;
+    position: absolute;
+    top: 70px;
+    border-radius: 0 0 5px 5px;
+    display: none;
+}
+.header-none div{
+    color: rgb(138, 136, 136);
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+/* 点击时出现隐藏的选项 */
+.header-none div:hover{
+    background: rgb(207, 204, 204);
+}
+/* 页面导航栏样式 */
+.nav{
+    width: 100%;
+    background: rgb(0, 204, 255);
+    height: 45px;
+}
+.nav-box{
+    width: 60%;
+    margin: 0 auto;
+}
+.nav-box p{
+    float: left;
+    line-height: 45px;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.nav-box p:last-child{
+    float: right;
+}
+/* 鼠标移入该表字体颜色 */
+.nav-box p:hover{
+    color: gray;
+}
+/* 页面主体第一部分样式 */
+.content-1{
+    width: 60%;
+    height: 320px;
+    margin: 30px auto 0;
+    background: rgb(252, 249, 249);
+}
+.con1-top{
+    width: 95%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    border-bottom: rgb(206, 203, 203) 1px solid;
+}
+.con1-top-left{
+    float: left;
+}
+.con1-top-left a{
+    cursor: pointer;
+    font-size: 14px;
+    color: orange;
+}
+.con1-top-right{
+    float: right;
+}
+.con1-top-right p{
+    display: inline;
+    color: blue;
+}
+.con1-bottom{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+.con1-bottom span:first-child{
+    background: url(../素材/hospital-1.jpg) no-repeat;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    float: left;
+}
+.con1-bottom span:last-child{
+    background: url(../素材/map-1.png) no-repeat;
+    width: 250px;
+    height: 212px;
+    margin-top: 10px;
+    float: right;
+}
+.con1-bottom div{
+    width: 60%;
+    position: absolute;
+    left: 60px;
+    right: 0;
+    margin: 0 auto;
+}
+.con1-bottom div p{
+    height: 23px;
+    padding-left: 30px;
+    margin-top: 20px;
+    line-height: 23px;
+    font-size: 15px;
+}
+.con1-bottom div p:first-child{
+    background: url(../素材/icon-web.png) no-repeat 0 4px;
+}
+.con1-bottom div p:nth-child(2){
+    background: url(../素材/icon-web.png) no-repeat 0 -18px;
+}
+.con1-bottom div p:nth-child(3){
+    background: url(../素材/icon-web.png) no-repeat 0 -40px;
+}
+.con1-bottom div p:last-child{
+    background: url(../素材/icon-web.png) no-repeat 0 -60px;
+}
+/* 页面主体第二部分样式s */
+.content-2{
+    width: 60%;
+    margin: 40px auto 0;
+}
+.content-2 .con2-top{
+    height: 30px;
+    border-bottom: 3px solid rgb(0, 204, 255);
+}
+.content-2 .con2-none{
+    display: none;
+}
+.content-2 .con2-top-none{
+    height: 33px;
+    display: none;
+    font-size: 22px;
+}
+.content-2 .con2-top-none a{
+    font-size: 16px;
+    color: rgb(0, 204, 255);
+}
+.content-2 .con2-top span{
+    text-align: center;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(0, 204, 255);
+    cursor: pointer;
+}
+.content-2 .con2-top span:first-child{
+    color: #fff;
+    background: rgb(0, 204, 255);
+}
+/* 预约挂号栏 */
+.content-2 .con2-bottom1{
+    margin: 20px auto 20px;
+    height: 600px;
+    position: relative;
+}
+.content-2 .con2-bottom1 > table{
+    border: #f4f6fa 1px solid;
+    width: 70%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+.content-2 .con2-bottom1 table b{
+    cursor: pointer;
+}
+.content-2 .con2-bottom1 table tr:nth-last-of-type(3n+1) td{
+    border-bottom: #f4f6fa 1px solid;
+}
+/* 排班表样式 */
+.con2-none{
+    width: 71%;
+    height: 350px;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+.con2-none .con2-none-left{
+    position: absolute;
+    left: 0;
+    height: 350px;
+    width: 3%;
+    z-index: 999;
+}
+.con2-none .con2-none-left a{
+    display: block;
+    background: url(../素材/icon-scheduling-left.jpg) no-repeat;
+    height: 47px;
+}
+.con2-none .con2-none-left p,.con2-none .con2-none-right p{
+    height: 101px;
+    line-height: 101px;
+    background: rgb(233, 251, 255);
+}
+.con2-none .con2-none-right{
+    float: right;
+    height: 350px;
+    width: 4%;
+    transform: translateZ(1px);
+}
+.con2-none .con2-none-right a{
+    display: block;
+    background: url(../素材/icon-scheduling-right.jpg) no-repeat;
+    height: 47px;
+}
+.con2-none .con2-none-table{
+    float: left;
+    width: 90%;
+    position: relative;
+}
+.con2-none tr:first-child{
+    background: rgb(250, 250, 250);
+}
+.con2-none tr:nth-child(3){
+    background: rgb(230, 241, 255);
+    color: rgb(0, 195, 255);
+}
+.con2-none td{
+    border: rgb(235, 235, 235) 1px solid;
+}
+.con2-none .con2-none-bottom{
+    width: 99.6%;
+    height: 100px;
+    border: rgb(235, 235, 235) 1px solid;
+    position: absolute;
+    bottom: 148px;
+    line-height: 100px;
+    color: rgb(170, 170, 170);
+    background: url(../素材/icon-info.jpg) no-repeat 41%;
+}
+/* 预约挂号栏的右部文本框 */
+.content-2 .con2-bottom1 .con2-bottom1-right{
+    width: 28%;
+    height: 100%;
+    float: right;
+}
+.content-2 .con2-bottom1 .con2-bottom1-right p{
+    height: 40px;
+    background: rgb(243, 243, 243);
+    line-height: 40px;
+    font-size: 12px;
+    color: rgb(0, 204, 255);
+}
+.content-2 .con2-bottom1 .con2-bottom1-right p i{
+    font-size: 16px;
+    color: #000;
+    font-style: inherit;
+    margin-left: 10px;
+}
+.content-2 .con2-bottom1 .con2-bottom1-right textarea{
+    padding: 10px 10px 0;
+    line-height: 25px;
+}
+/* 医院介绍栏 */
+.content-2 .con2-bottom2{
+    width: 95%;
+    margin: 20px auto 20px;
+    line-height: 25px;
+    display: none;
+    height: 600px;
+}
+/* 预约须知栏 */
+.content-2 .con2-bottom3{
+    width: 95%;
+    margin: 20px auto 20px;
+    line-height: 25px;
+    display: none;
+    height: 600px;
+}
+/* 停诊信息栏 */
+.content-2 .con2-bottom4{
+    width: 95%;
+    margin: 20px auto 40px;
+    text-align: center;
+    display: none;
+    height: 580px;
+}
+.content-2 .con2-bottom4 h3{
+    line-height: 50px;
+}
+.content-2 .con2-bottom4 table{
+    border-collapse: collapse;
+}
+.content-2 .con2-bottom4 table *{
+    border: 1px solid rgb(199, 199, 199);
+}
+/* 查询取消栏 */
+.content-2 .con2-bottom5{
+    width: 95%;
+    height: 400px;
+    padding-top: 300px;
+    margin: 20px auto 20px;
+    text-align: center;
+    display: none;
+}
+.content-2 .con2-bottom5 input{
+    width: 200px;
+    height: 30px;
+    margin: 0 10px;
+    border: 1px rgb(199, 199, 199) solid;
+}
+.content-2 .con2-bottom5 button{
+    width: 100px;
+    height: 30px;
+    background: rgb(0, 204, 255);
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+/* 页尾样式 */
+footer{
+    width: 100%;
+    height: 80px;
+    background: rgb(245, 245, 245);
+    text-align: center;
+    line-height: 80px;
+}

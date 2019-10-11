@@ -1,0 +1,325 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Microsoft Yahei",微软雅黑;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    color: #fff;
+    z-index: 999;
+}
+.header img{
+    float: left;
+    margin: 10px;
+}
+.header h2{
+    float: left;
+    line-height: 60px;
+}
+.header .header-nav{
+    float: right;
+    line-height: 40px;
+    font-size: 0;
+}
+.header .header-nav a{
+    display: inline-block;
+    width: 90px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+.header .header-nav hr{
+    width: 55px;
+    border: red solid 1px;
+    position: absolute;            /* 用相对定位时 在ie浏览器下位置会发生变化 只能用绝对定位  没搞清楚原因 */
+    top: 50px;
+    right: 494px;
+    transition:0.2s all linear;
+}
+.header .header-nav :last-child{
+    background-color: red;
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+.screen-1{
+    background: url(img/sc1.jpg) no-repeat;
+    background-size: cover;
+    height: 640px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.screen-1 h1{
+    position: relative;
+    top: 250px;
+    font-size: 38px;
+}
+.screen-1 div{
+    position: relative;
+    top: 280px;
+    font-size: 18px;
+}
+.screen-2{
+    background: url(img/sc2.png) no-repeat bottom center;
+    height: 640px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.screen-2 .sc2-1{
+    position: relative;
+    top: 206px;
+    left: 130px;
+    z-index: 2;
+    display: none;
+}
+.screen-2 .sc2-2{
+    position: relative;
+    top: 105px;
+    left: -40px;
+    z-index: 1;
+    display: none;
+}
+.screen-2 :first-child{
+    position: relative;
+    top: 70px;
+    font-size: 38px;
+    display: none;
+}
+.screen-2 hr{
+    position: relative;
+    top: 105px;
+    width: 50px;
+    border: 2px solid red;
+    margin: 0 auto;
+    display: none;
+}
+.screen-2 :last-child{
+    position: relative;
+    top: -240px;
+    font-size: 18px;
+    display: none;
+}
+.screen-3{
+    height: 640px;
+    width: 100%;
+    background: #2b333b;
+    background-size: 30%;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.screen-3 img{
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    width: 50px;
+    height: auto;
+}
+.screen-3 .sc3-1{
+    position: absolute;
+    top: 40px;
+    left: 250px;
+    width: 500px;
+    height: auto;
+}
+.screen-3 h1{
+    position: relative;
+    top: 200px;
+    left: 54%;
+    font-size: 38px;
+    display: none;
+}
+.screen-3 div{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border: 3px solid;
+    line-height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 52%;
+    top: 400px;
+    margin-left: 40px;
+    display: none;
+}
+.screen-3 :nth-last-child(1){
+    color: #90bd56;
+}
+.screen-3 :nth-last-child(2){
+    color: #22c7e5;
+}
+.screen-3 :nth-last-child(3){
+    color: #ff584c;
+}
+.screen-3 :nth-last-child(4){
+    color: #4f7dfd;
+}
+.screen-3 :nth-last-child(5){
+    color: #1ca4ff;
+}
+.screen-3 span{
+    display: block;
+    position: relative;
+    top: 245px;
+    left: 54%;
+    font-size: 18px;
+    line-height: 26px;
+    display: none;
+}
+.screen-3 hr{
+    position: relative;
+    top: 225px;
+    left: 54%;
+    width: 50px;
+    border: 2px solid red;
+    display: none;
+}
+.screen-4{
+    height: 640px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.screen-4 h1{
+    position: relative;
+    top: 110px;
+    font-size: 38px;
+    display: none;
+}
+.screen-4 div{
+    position: relative;
+    top: 160px;
+    font-size: 18px;
+    display: none;
+}
+.screen-4 img{
+    position: relative;
+    top: 230px;
+    margin: 0 100px;
+    display: none;
+}
+.screen-4 span{
+    position: absolute;
+    top: 68%;
+    margin: 0 100px 0 -200px;
+    display: none;
+}
+.screen-4 :nth-last-child(7){
+    margin: 0 100px 0 -225px;
+}
+.screen-4 hr{
+    position: relative;
+    top: 140px;
+    width: 50px;
+    border: 2px solid red;
+    margin: 0 auto;
+    display: none;
+}
+.screen-5{
+    height: 640px;
+    width: 100%;
+    text-align: center;
+    background: url(img/sc5.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.screen-5 img{
+    position: relative;
+    top: 100px;
+    width: 50px;
+    height: auto;
+}
+.screen-5 .sc5-1{
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+.screen-5 h1{
+    position: relative;
+    top: 150px;
+    display: none;
+}
+.screen-5 hr{
+    position: relative;
+    top: 180px;
+    margin: 0 auto;
+    width: 50px;
+    border: 2px solid #fff;
+    display: none;
+}
+.screen-5 div{
+    position: relative;
+    top: 210px;
+    display: none;
+}
+.screen-6{
+    height: 200px;
+    width: 100%;
+}
+.screen-6 a{
+    display: block;
+    border: 1px #000 solid;
+    height: 40px;
+    width: 170px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+}
+.footer{
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    background: #000;
+}
+.footer a{
+    margin: 0 10px;
+    position: relative;
+    top: 20px;
+    color: #c8cdd2;
+}
+.footer div:last-child{
+    position: relative;
+    top: 25px;
+    color: #787d82;
+}
+.footer a:visited{
+    color: #c8cdd2;
+}
+.side{
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    background: #fff;
+    width: 50px;
+    height: 220px;
+    box-shadow: 0px 2px 10px 0px rgb(92, 90, 90);
+}
+.side a{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 18%;
+    text-align: center;
+    line-height: 44px;
+    border-bottom: rgb(158, 150, 150) 2px solid;
+    color: #787d82;
+}
+.side :first-child{
+    border-bottom: rgb(255, 0, 0) 2px solid;
+    color: #f00;
+}

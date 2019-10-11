@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100%;
+    overflow: hidden;               /* 隐藏溢出消除滚动条 */
+}
+.blue{
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(rgb(196, 228, 253) 0%,#fff 100%);
+}
+.blue div{
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.blue div::before{
+    content: "";
+    width: 80px;
+    height: 60px;
+    background: #fff;
+    border-radius: 40px;
+    position: absolute;
+    top: 37px;
+    left: -37px;
+    transform: rotate(45deg);
+}
+.blue div:after{
+    display: block;
+    content: "";
+    width: 160px;
+    height: 50px;
+    background: #fff;
+    border-radius: 25px;
+    position: absolute;
+    top: 47px;
+    left: -47px;
+}
+.blue .by1{
+    transform: scale(1.1) translate(-200px,10px);
+    opacity: .8;
+    animation: by 10s cubic-bezier(0,0,0,0) infinite;
+}
+.blue .by2{
+    transform: scale(1.3) translate(50px,15px);
+    animation: by 8s cubic-bezier(0,0,0,0) infinite;
+    
+}
+.blue .by3{
+    transform: scale(1.1) translate(-100px,10px);
+    opacity: .8;
+    animation: by 10s cubic-bezier(0,0,0,0) infinite;
+}
+.blue .by4{
+    transform: scale(.9) translate(850px,-300px);
+    opacity: .9;
+    animation: by 9s cubic-bezier(0,0,0,0) infinite;
+}
+.blue .by5{
+    transform: scale(.8) translate(800px,-270px);
+    opacity: .7;
+    animation: by 12s cubic-bezier(0,0,0,0) infinite;
+}
+.green{
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(#fff 0%,rgb(148, 190, 89) 100%);
+    position: absolute;
+    bottom: 0;
+}
+.green img{
+    width: 250px;
+    position: absolute;
+    right: 200px;
+    bottom: 50px;
+}
+@keyframes by{
+    from{ margin-left: 100%;}
+    to{ margin-left: -100%;}
+}

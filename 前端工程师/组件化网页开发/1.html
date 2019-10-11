@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title></title>
+	<script src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+    <style>
+		*{
+			padding:0;
+			margin:0;
+			border:0;
+		}
+		.box{
+			width: 100%;
+		}
+		.top{
+			height: 40px;
+			background: rgb(247, 242, 242);
+		}
+		.top-box{
+			width: 50%;
+			margin: 0 auto;
+		}
+		.top-box p{
+			background: url(http://climg.mukewang.com/58c61b9d0001e02d00170017.png) center no-repeat;
+		}
+		.top-left{
+			padding-left: 12px;
+			line-height: 40px;
+			float: left;
+			color: rgb(155, 151, 151);
+		}
+		.top-right{
+			line-height: 40px;
+			float: right;
+			color: rgb(155, 151, 151);
+		}
+		.top-right a{
+			color: rgb(0, 204, 255);
+			text-decoration: none;
+		}
+		header{
+			width: 50%;
+			height: 100px;
+			margin: 0 auto;
+			position: relative;
+		}
+		header .header-left{
+			background: url(http://climg.mukewang.com/58c61b2f0001f5c008400172.png) no-repeat center;
+			background-size: 400px;
+			width: 400px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+		}
+		header .header-right{
+			background: url(http://climg.mukewang.com/58c61b7e00012b9303260038.jpg) no-repeat center;
+			background-size: 320px;
+			width: 320px;
+			height: 100px;
+			float: right;
+			position: relative;
+		}
+		header .header-right p{
+			position: absolute;
+			top: 38px;
+			left: 8px;
+			color: #fff;
+		}
+		header .header-right a{
+			position: absolute;
+			top: 38px;
+			left: 43px;
+			text-decoration: none;
+		}
+		header .header-right input{
+			position: absolute;
+			top: 32px;
+			right: 40px;
+			height: 35px;
+			width: 211px;
+			outline: none;
+			font-size: 16px;
+		}
+		.header-none{
+			width: 67px;
+			height: 95px;
+			background: #fcbb0a;
+			z-index: 999;
+			position: absolute;
+			top: 70px;
+			border-radius: 0 0 5px 5px;
+			display: none;
+		}
+		.header-none div{
+			color: #fff;
+			height: 30px;
+			text-align: left;
+			margin-left: 9px;
+			line-height: 30px;
+			cursor: pointer;
+		}
+		.nav{
+			width: 100%;
+			background: rgb(0, 204, 255);
+			height: 45px;
+		}
+		.nav-box{
+			width: 50%;
+			margin: 0 auto;
+		}
+		.nav-box p{
+			float: left;
+			line-height: 45px;
+			width: 100px;
+			text-align: center;
+			color: #fff;
+		}
+		.nav-box p:hover{
+			background: rgb(29, 153, 255);
+		}
+		.content{
+			width: 50%;
+			margin: 0 auto;
+			position: relative;
+		}
+		.content .content-top{
+			background: url(http://climg.mukewang.com/58c61a4f0001967a01380030.jpg) no-repeat center;
+			position: absolute;
+			left: 0;
+			top: 20px;
+			width: 123px;
+			height: 30px;
+			color: #fff;
+			padding-left: 15px;
+			line-height: 30px;
+		}
+		.content .content-bottom{
+			width: 100%;
+			height: 80px;
+			border: rgb(155, 151, 151) 1px solid;
+			border-top: 3px rgb(51, 146, 224) solid;
+			position: absolute;
+			top: 50px;
+			overflow: hidden;
+			background: #fff;
+			z-index: 999;
+		}
+		.content .content-bottom .content-bottom-left{
+			width: 70%;
+			margin-left: 20px;
+		}
+		.content .content-bottom .content-bottom-left a{
+			text-decoration: none;
+			display: inline-block;
+			width: 16%;
+			margin-top: 15px;
+		}
+		.content .content-bottom .content-bottom-right{
+			float: right;
+			position: relative;
+			top: -60px;
+			left: -30px;
+		}
+		.content-left{
+			width: 26%;
+			position: relative;
+			top: 150px;
+			float: left;
+			border: rgb(155, 151, 151) 1px solid;
+		}
+		.content-left div{
+			margin-left: 30px;
+			line-height: 40px;
+			cursor: pointer;
+		}
+		.content-left a{
+			width: 22px;
+			height: 32px;
+			background-image: url(http://climg.mukewang.com/58c61b610001c58300440638.jpg);
+			background-repeat: no-repeat;
+			background-position: 0px 10px;
+			position: absolute;
+			left: 5px;
+		}
+		.content-left div p{
+			display: inline;
+			position: absolute;
+			right: 10px;
+			color: rgb(155, 151, 151);
+		}
+		.content-right{
+			width: 70%;
+			position: relative;
+			top: 150px;
+			float: right;
+			border: rgb(155, 151, 151) 1px solid;
+		}
+		.content-right div{
+			width: 90%;
+			margin: 30px auto;
+		}
+		.content-right p{
+			height: 35px;
+			border-bottom: 1px dashed rgb(155, 151, 151);
+			color: rgb(0, 153, 255);
+		}
+		.content-right a{
+			text-decoration: none;
+			display: inline-block;
+			width: 16%;
+			margin-top: 15px;
+			margin-left: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="top">
+			<div class="top-box">
+			<p class="top-left">&nbsp;</p>
+			<div class="top-left">010-114/116114电话预约</div>
+			<div class="top-right">欢迎来到城市预约挂号统一平台 &nbsp;&nbsp;请&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">登陆</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">帮助中心</a></div>
+			</div>
+		</div>
+		<header>
+			<div class="header-left">&nbsp;</div>
+			<div class="header-right">
+				<p>医院</p>
+				<a href="#" class="sele">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				<input type="text" placeholder="请输入搜索内容">
+				<div class="header-none">
+					<div>医院</div>
+					<div>科室</div>
+					<div>疾病</div>
+				</div>
+			</div>
+		</header>
+		<div class="nav">
+			<div class="nav-box">
+				<p>首页</p>
+				<p>按医院挂号</p>
+				<p>按科室挂号</p>
+				<p>按疾病挂号</p>
+				<p>最新公告</p>
+			</div>
+		</div>
+		<div class="content">
+				<div class="content-top">&nbsp;热门科室</div>
+				<div class="content-bottom">
+					<div class="content-bottom-left">
+					<a href="#">神经外科</a>
+					<a href="#">妇科</a>
+					<a href="#">产科</a>
+					<a href="#">儿科</a>
+					<a href="#">骨科</a>
+					<a href="#">眼科</a>
+					<a href="#">耳鼻喉科</a>
+					<a href="#">肿瘤外科</a>
+					<a href="#">肿瘤综合科</a>
+					<a href="#">皮肤美容</a>
+					<a href="#">心理咨询科</a>
+					<a href="#">中医科</a>
+					<a href="#">神经外科</a>
+					<a href="#">妇科</a>
+					<a href="#">产科</a>
+					<a href="#">儿科</a>
+					<a href="#">骨科</a>
+					<a href="#">眼科</a>
+					</div>
+					<div class="content-bottom-right">
+						<a href="#" class="zkqb">展开全部</a>
+					</div>
+				</div>
+			<div class="content-left">
+				<div><a>&nbsp;</a>内科<p>〉</p></div>
+				<div><a>&nbsp;</a>外科<p>〉</p></div>
+				<div><a>&nbsp;</a>妇产科<p>〉</p></div>
+				<div><a>&nbsp;</a>生殖中心<p>〉</p></div>
+				<div><a>&nbsp;</a>儿科<p>〉</p></div>
+			</div>
+			<div class="content-right">
+				<div class="content-right-one">
+					<p>内科</p>
+					<a href="#">神经外科</a>
+					<a href="#">妇科</a>
+					<a href="#">产科</a>
+					<a href="#">儿科</a>
+					<a href="#">骨科</a>
+					<a href="#">眼科</a>
+					<a href="#">耳鼻喉科</a>
+					<a href="#">肿瘤外科</a>
+					<a href="#">肿瘤综合科</a>
+					<a href="#">皮肤美容</a>
+				</div>
+				<div class="content-right-two">
+					<p>外科</p>
+					<a href="#">神经外科</a>
+					<a href="#">妇科</a>
+					<a href="#">产科</a>
+					<a href="#">儿科</a>
+					<a href="#">骨科</a>
+					<a href="#">眼科</a>
+					<a href="#">耳鼻喉科</a>
+					<a href="#">肿瘤外科</a>
+					<a href="#">肿瘤综合科</a>
+					<a href="#">皮肤美容</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(".sele").click(function(){
+			$(".header-none").show();
+			return false;
+		})
+		$("body").click(function(){
+			$(".header-none").hide();
+		})
+		$("div",".header-none").click(function(){
+			$("p",".header-right").text($(this).text());
+			$(".header-none").hide();
+		})
+		$(".zkqb").click(function(){
+			if($(this).text()==="隐藏内容"){
+				$(".content-bottom").css({
+				"overflow" : "hidden",
+				"height" : "80px"
+				})
+				$(this).text("展开全部")
+			}else{
+				$(".content-bottom").css({
+				"overflow" : "visible",
+				"height" : "120px"
+				})
+				$(this).text("隐藏内容")
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+section{
+    width: 1720px;
+    margin: 0 auto;
+}
+aside{
+    float: left;
+    width: 600px;
+    position: relative;
+}
+aside h1{
+    font-size: 32px;
+    margin: 30px 0 30px 0;
+
+}
+aside h1 span,article h1 span{
+    color: gray;
+}
+aside div{
+    height: 120px;
+    margin-left: 130px;
+}
+aside div span{
+    display: block;
+    text-align: center;
+    line-height: 51px;
+    width: 50px;
+    height: 51px;
+    background-image: url(http://climg.mukewang.com/582e61290001787900500051.png);
+    position: absolute;
+    left: 60px;
+}
+aside div p a{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+article{
+    float: right;
+    width: 1000px;
+}
+article h1{
+    font-size: 30px;
+    margin: 30px 0;
+}
+article p{
+    margin: 30px 0;
+}
+article img{
+    width: 100%;
+}

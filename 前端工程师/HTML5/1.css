@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+header{
+    display: block;
+    width: 100%;
+    height: 80px;
+    background: black;
+}
+header .header{
+    width: 1200px;
+    margin: 0 auto;
+}
+header .header > a{
+    float: left;
+    margin-top: 20px;
+    font-size: 28px;
+}
+header .header nav{
+    float: right;
+}
+header .header nav a{
+    float: left;
+    display: block;
+    width: 80px;
+    height: 70px;
+    line-height: 80px;
+    text-align: center;
+}
+header .header nav .a1{
+    background: red;
+}
+header .header nav .a2{
+    background: orange;
+}
+header .header nav .a3{
+    background: green;
+}
+header .header nav .a4{
+    background: #9447eb;
+}
+header .header nav .a5{
+    background: orange;
+}
+header .header nav .a6{
+    background: blue;
+}
+header .header nav a:hover{
+    padding-bottom: 10px;
+}

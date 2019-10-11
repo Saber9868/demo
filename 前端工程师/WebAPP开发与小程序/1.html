@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas离屏</title>
+    <style>
+        #offcanvas{
+            border: 1px red solid;
+            display: none;;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800px" height="500px" id="canvas">您的浏览器不支持canvas</canvas>
+    <canvas width="800px" height="500px" id="offcanvas">您的浏览器不支持canvas</canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var cont=canvas.getContext("2d");
+        var offcanvas=document.getElementById("offcanvas");
+        var offcont=offcanvas.getContext("2d");
+        var img=new Image();
+        img.src="http://climg.mukewang.com/5aa6633400017bc704170220.jpg";
+        img.onload=function(){
+            cont.drawImage(img,0,0,800,500);
+            cont.drawImage(offcanvas,0,0,800,500);
+        }
+        var str="==www.imooc.com=";
+        offcont.font="50px sans-serif";
+        offcont.textAlign="center";
+        offcont.fillStyle="rgba(255,255,255,0.5)";
+        offcont.fillText(str,400,450);
+    </script>
+</body>
+</html>

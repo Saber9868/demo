@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function arr(str){
+        var a=str.split(" "),c=[];
+        for(i=0;i<a.length;i++){
+            var b=a[i];
+            c+=b.charAt(0).toUpperCase()+b.substr(1);
+        }
+        return c;
+    }
+    var d=arr(prompt("请输入要转换首字母大写的英文"));
+    document.write(d);
+</script>
+</body>
+</html>

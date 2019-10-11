@@ -1,0 +1,54 @@
+ *{
+     padding: 0;
+     margin: 0;
+ }
+ table{
+    border-collapse: collapse;
+   }
+ .clear{
+     clear: both;
+ }
+ header,footer{
+     width: 100%;
+     height: 60px;
+     background: #00b7ff;
+ }
+ header img{
+     margin-top: 10px;
+ }
+ footer p{
+     text-align: center;
+     line-height: 60px;
+     color: beige;
+ }
+ section{
+     width: 100%;
+ }
+ section aside{
+     width: 12%;
+     float: left;
+     margin-top: 15px;
+ }
+ section aside table tr td{
+     height: 35px;
+ }
+ section article{
+    width: 88%;
+    float: right;
+}
+ section article table{
+    width: 100%;
+}
+ section article table tr td{
+     height: 50px;
+     text-align: center;
+     border: 3px solid #c5c1c1;
+ }
+ section article table tr .no-center{
+     text-align: left;
+     
+ }
+ section article table tr td img{
+    width: 50px;
+    height: 50px;
+ }

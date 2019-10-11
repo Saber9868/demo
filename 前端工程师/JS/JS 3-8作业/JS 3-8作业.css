@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.clear{
+    clear: both;
+}
+.main{
+    width: 1200px;
+    
+    margin: 0 auto;
+}
+/* 导航栏样式 */
+.menu div{
+    width: 25%;
+    height: 50px;
+    font: 26px bold;
+    color: #666;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    border: 0px red solid;
+    border-radius: 5px;
+}
+.banner{
+    position: absolute;
+}
+.banner div{
+    position: absolute;
+    top: 0;
+}
+.banner-box{
+    transition:0.2s all linear;
+}
+.hid{
+    display: none;
+}
+/* 图片对应导航栏的背景颜色 */
+.bgcolor{
+    background: #ffcc00;
+}

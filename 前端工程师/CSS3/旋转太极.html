@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-5</title>
+    <style type="text/css">
+        body{
+            overflow: hidden;
+        }
+        div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            border: 1px solid black;
+            border-bottom: 200px solid black;
+            border-radius: 50%;
+            transform-origin: 50% 50%;
+            animation: rotate 5s linear infinite;
+            /*此处写代码*/
+        }
+        div::before{
+            content: "";
+            width: 199px;
+            height: 199px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: black solid 80px;
+            background: #fff;
+            position:absolute;
+            top: 100px;
+            left: 0px;
+        }
+        div::after{
+            content: "";
+            width: 199px;
+            height: 199px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: #fff solid 80px;
+            background: black;
+            position:absolute;
+            right: 0px;
+            bottom: -100px;
+        }
+        @keyframes rotate{
+            from{ transform: rotate(0deg);}
+            to{ transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
