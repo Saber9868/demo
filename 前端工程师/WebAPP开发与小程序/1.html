@@ -2,33 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>canvas离屏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <style>
-        #offcanvas{
+        canvas{
+            margin-left: 35%;
             border: 1px red solid;
-            display: none;;
         }
     </style>
 </head>
 <body>
-    <canvas width="800px" height="500px" id="canvas">您的浏览器不支持canvas</canvas>
-    <canvas width="800px" height="500px" id="offcanvas">您的浏览器不支持canvas</canvas>
+    <canvas width="600" height="570" id="canvas">
+
+    </canvas>
     <script>
         var canvas=document.getElementById("canvas");
         var cont=canvas.getContext("2d");
-        var offcanvas=document.getElementById("offcanvas");
-        var offcont=offcanvas.getContext("2d");
-        var img=new Image();
-        img.src="http://climg.mukewang.com/5aa6633400017bc704170220.jpg";
-        img.onload=function(){
-            cont.drawImage(img,0,0,800,500);
-            cont.drawImage(offcanvas,0,0,800,500);
-        }
-        var str="==www.imooc.com=";
-        offcont.font="50px sans-serif";
-        offcont.textAlign="center";
-        offcont.fillStyle="rgba(255,255,255,0.5)";
-        offcont.fillText(str,400,450);
+        cont.save();
+
+        // 猫尾巴
+        cont.lineWidth=5;
+        cont.moveTo(433,458);
+        cont.lineTo(480,438);
+        cont.stroke();
+        cont.beginPath();
+        
+        cont.bezierCurveTo(480,438,500,435,485,464);
+        cont.lineTo(433,494); 
+        cont.stroke();
+        cont.beginPath();
+
+        // 身体
+        cont.moveTo(255,392);
+        cont.lineTo(255,526);
+        cont.stroke();
+        cont.beginPath();
+
+        cont.bezierCurveTo(256,526,268,577,293,530);
+        cont.lineTo(383,530); 
+        cont.stroke();
+        cont.beginPath();
+        cont.bezierCurveTo(383,528,410,580,434,523);
+        cont.stroke();
+        cont.beginPath();
+        cont.quadraticCurveTo(434, 523, 430, 393);
+        cont.stroke();
+        cont.beginPath();
+
+        cont.restore();
+
+        cont.save();
+
+        // 猫耳朵
+        cont.lineWidth=4;
+        cont.moveTo(106,79);
+        cont.quadraticCurveTo(120, 0, 212, 14);
+        cont.stroke();
+        cont.beginPath();
+        cont.moveTo(376,14);
+        cont.quadraticCurveTo(460, 10, 487, 30);
+        cont.stroke();
+        cont.beginPath();
+        cont.moveTo(488,30);
+        cont.quadraticCurveTo(510, 60, 512, 110);
+        cont.stroke();
+        cont.beginPath();
+        // cont.quadraticCurveTo(508, 75, 512, 110);
+        // cont.stroke();
+        // cont.beginPath();
+
+        cont.restore();
+        
+        cont.save();
+        cont.fillStyle="#ffffd9";
+        // 猫头
+        cont.lineWidth=8;
+        cont.moveTo(280,6);
+        cont.bezierCurveTo(476,0,535,154,546,180);
+        cont.fill();
+        cont.beginPath();
+        cont.moveTo(546,180); 
+        cont.bezierCurveTo(584,304,530,368,432,392);
+        cont.fill();
+        cont.beginPath();
+        cont.moveTo(255,390); 
+        cont.quadraticCurveTo(150, 390, 60, 322);
+        cont.fill();
+        cont.beginPath();
+        cont.moveTo(50,150); 
+        cont.quadraticCurveTo(0, 250, 60, 322);
+        cont.fill();
+        cont.beginPath();
+        cont.moveTo(280,6); 
+        cont.quadraticCurveTo(140, 15, 50, 150);
+        cont.fill();
+        cont.beginPath();
+
+        cont.restore();
+        
+        cont.save();
+        // 猫胡须
     </script>
 </body>
 </html>
