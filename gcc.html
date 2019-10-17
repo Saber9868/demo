@@ -87,9 +87,9 @@
                 x2 = ev.changedTouches[0].pageX - x1 + curPoint.x;
                 // y2 = ev.changedTouches[0].pageY - y1 + curPoint.y;
                 if(x2<0) return x2=0;
-                if(x2>250) return x2=250;
+                if(x2>header.clientWidth) return x2=header.clientWidth-50;
                 div.style.transform = 'translate3d(' + x2 + 'px,0, 0)';
-                if(x2>=240){
+                if(x2>=header.clientWidth-50){
                     header.classList.add("none");
                     setTimeout(function(){h1.innerHTML="3";h1.style.display="block"},1000);
                     setTimeout(function(){h1.innerHTML="2"},2000);
