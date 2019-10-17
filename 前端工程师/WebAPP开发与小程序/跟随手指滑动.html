@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>2.4 单指拖拽--拖拽</title>
+    <style>
+            div{
+                background: red;
+                width: 50px;
+                height: 50px;
+                z-index: 999;
+            }
+            p{
+                width: 100%;
+                text-align: center;
+                position: relative;
+                left: -50px;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <p>touch开始的位置:<b></b></p>
+        <p>touch移动的位置:<b></b></p>
+        <p>touch结束的位置:<b></b></p>
+        <script>
+            var div=document.getElementsByTagName("div")[0];
+            var b1=document.getElementsByTagName("b")[0];
+            var b2=document.getElementsByTagName("b")[1];
+            var b3=document.getElementsByTagName("b")[2];
+            var curPoint = {
+                x: 0,
+                y: 0
+            };
+            div.addEventListener('touchstart', function(ev) {
+                x1 = ev.changedTouches[0].pageX;
+                y1 = ev.changedTouches[0].pageY;
+                b1.innerHTML=x1+","+y1;
+            });
+            div.addEventListener('touchmove', function(ev) {
+                ev.preventDefault();
+                x2 = ev.changedTouches[0].pageX - x1 + curPoint.x;
+                y2 = ev.changedTouches[0].pageY - y1 + curPoint.y;
+                div.style.transform = 'translate3d(' + x2 + 'px, ' + y2 + 'px, 0)';
+                b2.innerHTML=ev.changedTouches[0].pageX+","+ev.changedTouches[0].pageY;
+            });
+            div.addEventListener('touchend', function(ev) {
+                curPoint.x += ev.changedTouches[0].pageX - x1;
+                curPoint.y += ev.changedTouches[0].pageY - y1;
+                b3.innerHTML=ev.changedTouches[0].pageX+","+ev.changedTouches[0].pageY;
+            });
+    </script>
+</body>
+</html>
