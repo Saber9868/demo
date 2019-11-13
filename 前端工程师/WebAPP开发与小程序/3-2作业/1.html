@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="simple.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    /* 媒体查询 */
+    @media (max-width: 576px){
+        .container-3 img{
+            width: 46%;
+        }
+        .center{
+            flex-direction: column;
+            text-align: center;
+        }
+        .center h4{
+            margin: 1rem 0 0 0;
+            line-height: 2rem;
+        }
+        .center p{
+            margin: 0 0 1rem 0;
+            line-height: 2rem;
+        }
+        .top{
+            display: none;
+        }
+        .top-none{
+            display: block;
+        }
+    }
+</style>
+<body>
+    <!-- ipad下的顶部 -->
+    <div class="top">
+        <a href="javaScript:;">前端</a>
+        <a href="javaScript:;">java</a>
+        <a href="javaScript:;">ios</a>
+        <a href="javaScript:;">Android</a>
+        <a href="javaScript:;">php</a>
+    </div>
+    <!-- 6s下的顶部 -->
+    <div class="top-none">
+        imooc
+        <div class="top-btn" id="btn"></div>
+    </div>
+    <!-- 6s下的下拉栏 -->
+    <div class="top-nav" id="top-nav">
+        <a href="javaScript:;">前端</a>
+        <a href="javaScript:;">java</a>
+        <a href="javaScript:;">ios</a>
+        <a href="javaScript:;">Android</a>
+        <a href="javaScript:;">php</a>
+    </div>
+    <!-- 页面主体1 -->
+    <div class="container-1">
+        <img src="素材/1.png">
+        <p>IMOOC</p>
+        <input type="button" value="start">
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="javaScript:;">关于慕课网</a>
+        <a href="javaScript:;">关于课程</a>
+        <a href="javaScript:;">核心团队</a>
+        <a href="javaScript:;">新增专题</a>
+    </div>
+    <!-- 页面主体2 -->
+    <div class="container-2">
+        <h3>响应式</h3>
+        <p>当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，还是专业网站制作人员，都能使用慕课网设计出最具专业水准的网站。当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，还是专业网站制作人员，都能使用慕课网设计出最具专业水准的网站。</p>
+    </div>
+    <!-- 中间的欢迎来到慕课网 -->
+    <div class="center">
+        <h4>IMOOC</h4>
+        <p>welcome to www.imooc.com</p>
+    </div>
+    <!-- 页面主体3 -->
+    <div class="container-3">
+        <p>主打课程</p>
+        <img src="素材/1.jpg">
+        <img src="素材/2.jpg">
+        <img src="素材/3.jpg">
+        <img src="素材/4.jpg">
+        <img src="素材/5.jpg">
+        <img src="素材/6.jpg">
+    </div>
+    <!-- 底部 -->
+    <div class="buttom">
+        Copyright © 2017 imooc.com ALL Rights Reserved
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

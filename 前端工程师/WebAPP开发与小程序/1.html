@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="swiper/idangerous.swiper2.7.6.css">
+    <link rel="stylesheet" href="swiper/idangerous.swiper.3dflow.css">
+    <link rel="stylesheet" href="swiper/idangerous.swiper.scrollbar-2.4.1.css">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
-<style>
-    div{
-        width: 100%;
-        height: 100px;
-        background: red;
-    }
-    p{
-        font-size: 26px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 100px;
-    }
-</style>
 <body>
-    <div>
-        <p><b></b>事件被触发</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="http://climg.mukewang.com/59f2f3c60001e51206000600.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="http://climg.mukewang.com/59f2f3dc0001512e06000533.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="http://climg.mukewang.com/59f2f3fb0001725305000707.jpg" alt=""></div>
+        </div>
     </div>
-    <script src="hammer.js"></script>
+    <script src="swiper/idangerous.swiper2.7.6.min.js"></script>
+    <script src="swiper/idangerous.swiper.progress.min.js"></script>
+    <script src="swiper/idangerous.swiper.3dflow.js"></script>
+    <script src="swiper/idangerous.swiper.scrollbar-2.4.1.min.js"></script>
     <script>
-        var div=document.getElementsByTagName("div")[0];
-        var b=document.getElementsByTagName("b")[0];
-        var ham=new Hammer(div);
-        ham.on('tap doubletap pan swipe press pinch rotate',function(ev){
-            b.innerHTML=ev.type;
-            console.log(ev.type);
-        });
+        var mySwiper = new Swiper('.swiper-container',{
+            tdFlow: {
+                rotate : 60,
+                stretch :40,
+                depth: 100,
+                modifier : 1,
+                shadows : true
+            }
+        }); 
     </script>
 </body>
 </html>
